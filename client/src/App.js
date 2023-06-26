@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Chat from './components/Chat'
 import Homepage from './components/Homepage';
+import Navbar from './components/Navbar';
 
 function App() {
   
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <h1>Fun Times Chat!</h1>
+      <Navbar/>
         <Routes>
           <Route path='/' element={<Chat socket={socket} username={username} setUsername={setUsername}/>}/>
           <Route path='/homepage' element={<Homepage socket={socket} username={username} setUsername={setUsername}/>}/>
